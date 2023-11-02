@@ -1,0 +1,17 @@
+name: Sample Testing 
+
+on:
+  push: 
+    branches: [ main ] 
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one line script 
+      run: echo Hello, World!
+    - name: Run a multi-line script 
+      run: |
+        echo Line 1 for CI 
+        echo Line 2 for CI 
